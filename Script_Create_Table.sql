@@ -1,8 +1,9 @@
 /* 
 -------------------------------------------------------------------
-|| Versão do Script: v1.01                                       ||
+|| Versão do Script: v1.02                                       ||
 || Criador: Igor Pompeo                                          || 
-|| Objetivo: Script de criação de tabelas                        || 
+|| Objetivo: Script de criação de tabelas                        ||
+|| Alteração: Renomeado a tabela ProvaTesteProgresso para Prova  ||
 -------------------------------------------------------------------
 */
 
@@ -15,26 +16,26 @@ CREATE TABLE Alunos (
 )
 GO
 
-CREATE TABLE ProvaTesteProgresso (
+CREATE TABLE Prova (
     RA INT NOT NULL,
     Gabarito VARCHAR(1) NOT NULL,
-    AcertosConhecEspecificos INT,
-    PercenConhecEspecificos VARCHAR(4),
-    AcertosFundaGerais INT,
-    PercenFundaGerais VARCHAR(4),
-    NotasTeste FLOAT,
-    PercenTotal VARCHAR(4),
-    ClassGeral INT,
-    ClassUnidade INT
+    AcertosConhecEspecificos INT NOT NULL,
+    PercenConhecEspecificos VARCHAR(4) NOT NULL,
+    AcertosFundaGerais INT NOT NULL,
+    PercenFundaGerais VARCHAR(4)  NOT NULL,
+    NotasTeste FLOAT NOT NULL,
+    PercenTotal VARCHAR(4) NOT NULL,
+    ClassGeral INT NOT NULL,
+    ClassUnidade INT NOT NULL
 )
 GO
 
-CREATE TABLE Docentes (
+CREATE TABLE Professores (
     RA INT NOT NULL,
     Nome VARCHAR(100) NOT NULL,
     Unidade VARCHAR(100) NOT NULL,
-    CodMateria VARCHAR(15) NOT NULL,
     CodCurso VARCHAR(15) NOT NULL,
+    CodMateria VARCHAR(15) NOT NULL,
     Turma VARCHAR(10) NOT NULL
 )
 GO
@@ -42,15 +43,15 @@ GO
 
 CREATE TABLE Cursos (
     CodCurso VARCHAR(15) NOT NULL,
-    CodMateria VARCHAR(15)
+    CodMateria VARCHAR(15) NOT NULL
 )
 GO
 
 CREATE TABLE Materias (
     CodMateria VARCHAR(15) NOT NULL,
-    NomeMateria VARCHAR(40),
-    NotaN1 FLOAT,
-    NotaN2 FLOAT,
-    NotaTesteProgresso FLOAT
+    NomeMateria VARCHAR(40) NOT NULL,
+    NotaN1 FLOAT NOT NULL,
+    NotaN2 FLOAT NOT NULL,
+    NotaTesteProgresso FLOAT NOT NULL
 )
 GO
