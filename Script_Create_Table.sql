@@ -20,11 +20,11 @@ CREATE TABLE Prova (
     RA INT NOT NULL,
     Gabarito VARCHAR(1) NOT NULL,
     AcertosConhecEspecificos INT NOT NULL,
-    PercenConhecEspecificos VARCHAR(4) NOT NULL,
+    PercenConhecEspecificos VARCHAR(5) NOT NULL,
     AcertosFundaGerais INT NOT NULL,
-    PercenFundaGerais VARCHAR(4)  NOT NULL,
+    PercenFundaGerais VARCHAR(5)  NOT NULL,
     NotasTeste FLOAT NOT NULL,
-    PercenTotal VARCHAR(4) NOT NULL,
+    PercenTotal VARCHAR(5) NOT NULL,
     ClassGeral INT NOT NULL,
     ClassUnidade INT NOT NULL
 )
@@ -35,8 +35,7 @@ CREATE TABLE Professores (
     Nome VARCHAR(100) NOT NULL,
     Unidade VARCHAR(100) NOT NULL,
     CodCurso VARCHAR(15) NOT NULL,
-    CodMateria VARCHAR(15) NOT NULL,
-    Turma VARCHAR(10) NOT NULL
+    CodMateria VARCHAR(15) NOT NULL
 )
 GO
 
